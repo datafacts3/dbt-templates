@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: public
+  - name: dbt_demo
     tables:
       - name: retail_commodity_sku
       - name: retail_sale_log_info
