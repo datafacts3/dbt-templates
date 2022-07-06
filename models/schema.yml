@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: retail_commodity_sku
+      - name: retail_sale_log_info
+      - name: retail_sale_order
+      - name: retail_sale_order_child
+      - name: retail_sale_order_detail
+      - name: retail_sale_order_ext
+      - name: retail_sale_order_pay_info
+      - name: retail_sale_order_remark
