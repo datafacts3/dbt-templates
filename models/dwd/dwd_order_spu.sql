@@ -18,8 +18,8 @@ with dwd_order_spu as (
         cs.category_name as commodity_category_name,
         cs.category_two_name as commodity_category_two_name,
         cs.category_three_name as commodity_category_three_name
-    from {{source('public', 'retail_sale_order_detail')}} sod
-    inner join {{source('public', 'retail_commodity_sku')}} cs on cs.id = sod.commodity_id
+    from {{source('dbt_demo', 'retail_sale_order_detail')}} sod
+    inner join {{source('dbt_demo', 'retail_commodity_sku')}} cs on cs.id = sod.commodity_id
 )
 
 select * from dwd_order_spu

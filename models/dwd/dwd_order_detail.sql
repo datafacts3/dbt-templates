@@ -16,10 +16,10 @@ with dwd_order_detail as (
         opi.pay_type as payment_type,
         opi.pay_status as payment_status,
         opi.amount as payment_amount
-    from {{source('public', 'retail_sale_order')}} o
-    left join {{source('public', 'retail_sale_order_child')}} oc on oc.sale_order_id = o.id
-    left join {{source('public', 'retail_sale_order_detail')}} od on od.sale_order_child_id = oc.id
-    left join {{source('public', 'retail_sale_order_pay_info')}} opi on opi.sale_order_child_id = oc.id
+    from {{source('dbt_demo', 'retail_sale_order')}} o
+    left join {{source('dbt_demo', 'retail_sale_order_child')}} oc on oc.sale_order_id = o.id
+    left join {{source('dbt_demo', 'retail_sale_order_detail')}} od on od.sale_order_child_id = oc.id
+    left join {{source('dbt_demo', 'retail_sale_order_pay_info')}} opi on opi.sale_order_child_id = oc.id
 )
 
 select * from dwd_order_detail
