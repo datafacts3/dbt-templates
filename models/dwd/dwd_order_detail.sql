@@ -12,6 +12,7 @@ with dwd_order_detail as (
         oc.sale_time as order_time,
         oc.buyer_id as buyer_id,
         oc.buyer_phone as buyer_phone,
+        
         opi.pay_no as payment_no,
         opi.pay_type as payment_type,
         opi.pay_status as payment_status,
